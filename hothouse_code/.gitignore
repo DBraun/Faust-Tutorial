@@ -1,0 +1,11 @@
+.DS_STORE
+# ignore any project directories that get made
+*.d
+*.lst
+*.o
+*.cpp
+*.bin
+*.hex
+*.elf
+*.map
+*/Makefile

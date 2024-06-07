@@ -1,0 +1,61 @@
+import("stdfaust.lib");
+
+clampremap(from1, from2, to1, to2) = aa.clip(from1, from2) : it.remap(from1, from2, to1, to2);
+
+// stereo to m-s encoder
+ms_enc = _*.5,_*.5 <: +, -;
+
+// m-s to stereo decoder
+ms_dec = _,_ <: +, -;
+
+// x: norm slider in [0-1]
+// returns linear gain
+volScale(x) = decibels : ba.db2linear
+with {
+    a = -168.25311426460823;
+    c = 1.0592248739262249;
+    decibels = x : aa.clip(0, 1) : log10(pow(c,a)+_)/log10(c);
+};
+
+// x: norm slider in [0-1]
+// returns value in seconds
+timeScale(x) = x : aa.clip(0, 1) : pow(_, 5) * 32.;
+
+// x: norm slider in [0-1]
+// returns value in Hz
+rateScale(x) = x : aa.clip(0, 1) : pow(_, 4) * 100.;
+
+// These numbers are rough. Goal is roughly thresh_scale(0)==0 dB and thresh_scale(1)==-120 dB.
+// thresh_scale(x) = 0.0578542680090 + 26.39695681570924 * log(1.002586627745242 - x);
+thresh_scale(x) = -0.04951370275 + 20 * log(1+ma.E^-6 - x); // just a heuristic guess, not optimized
+
+// These numbers are rough. The goal is roughly that freq_scale(0)==8 and freq_scale(1)==13290.
+freq_scale(x) = 7.39353678992449*x + 2.1012962586591915 : exp;
+
+bpm = vslider("BPM [style:knob]", 120., 60., 240, .01);
+
+// Convert a bar to Hz. Note that b==0.25 means a quarter note.
+// warning: potential division by zero if b is zero.
+bar2hz(b) = rate
+with {
+    rate = bpm / (4*60*b);
+};
+
+bar2samp(b) = ma.SR * (4*60*b / bpm);
+
+wavetable(sf, pct) = it.lagrangeN(N, f_idx, par(i, N + 1, table(i_idx - int(N / 2) + i)))
+with {
+    N = 3; // Lagrange order
+    SFC = outputs(sf);
+    S = 0, 0 : sf : ba.selector(0, SFC); // table size
+    table(j) = int(ma.modulo(j, S)) : sf(0) : !, !, si.bus(SFC-2);
+    idx = S*pct;
+    f_idx = ma.frac(idx) + int(N / 2);
+    i_idx = int(idx);
+};
+
+// mathematical hard-syncing phasor (see `phasor_imp` in `faustlibraries/oscillators.lib`)
+m_hsp_phasor(freq, reset, phase) = (select2(hard_reset, +(freq/ma.SR), phase) : ma.decimal) ~ _
+with {
+    hard_reset = (1-1')|reset; // To correctly start at `phase` at the first sample
+};
