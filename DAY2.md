@@ -1,6 +1,8 @@
 # Day 2
 
-## Installation:
+We're going to install Faust and developer tools for our operating system so that we can build VST plugins.
+
+## Faust Installation:
 
 Go to the [releases](https://github.com/grame-cncm/faust/releases/) page.
 
@@ -58,6 +60,20 @@ In a shell window, confirm Faust is available:
 ```bash
 faust --version
 ```
+
+## IDE Installation
+
+### Windows
+
+For Windows users, install [Visual Studio](https://visualstudio.microsoft.com/vs/community/), which is different from VS Code.
+
+### macOS
+
+Install Xcode from the App Store.
+
+### Linux
+
+No developer tools should be necessary.
 
 ## Other Links
 
