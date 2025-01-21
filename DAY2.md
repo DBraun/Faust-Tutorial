@@ -143,7 +143,7 @@ Now open the relocated `tapestop.jucer` file. If it doesn't open nicely, find `~
 
 Now look for a gear icon towards the top-left of the Projucer menu. If you hover your mouse over it, it should say "Project Settings". Click it. You should set a list editable fields such as "Project Name" and "Project Version". Scroll down to "Plugin Manufacturer" and change the name from "GRAME" to your name or company name. Adjust the other settings if you feel comfortable. For example, in "Plugin Formats", you may want to deselect everything except "VST3".
 
-> Plugin GUI Magic (Optional). In the Projucer's left panel, there are three purple sections: "File Explorer", "Modules", and "Exporters". Click on "Modules" so that it expands. Find the "+" icon at the bottom of the expanded section. Click it and select "Add a module from a specified folder..." Navigate to `~/GitHub/foleys_gui_magic/modules/foleys_gui_magic` so that `foleys_gui_magic.h` is visible (but not selectable). Press "Open" to finalize your choice of this folder. You will see a pop-up in the lower left saying "Missing Module Dependencies". Select "Add missing dependencies". Now `foleys_gui_magic` should appear as a new entry in the Modules section in the left-panel.
+> Plugin GUI Magic (Optional). In the Projucer's left panel, there are three purple sections: "File Explorer", "Modules", and "Exporters". Click on "Modules" so that it expands. Find the "+" icon at the bottom of the expanded section. Click it and select "Add a module from a specified folder..." Navigate to `~/GitHub/foleys_gui_magic/modules/foleys_gui_magic` so that `Editor`/`General`/`Helpers` etc. are visible. Press "Open" to finalize your choice of this folder. You will see a pop-up in the lower left saying "Missing Module Dependencies". Select "Add missing dependencies". Now `foleys_gui_magic` should appear as a new entry in the Modules section in the left-panel.
 
 At the very top, there is a menu called "Select exporter". For macOS, select "Xcode (macOS)" and then press the circular Xcode logo to the right. For Windows, select "Visual Studio" and then press the circular Visual Studio logo to the right.
 
@@ -157,7 +157,7 @@ When you're done testing, we can build in Release mode. In Xcode, select "Produc
 
 ### Windows
 
-Select "Release" from the menu bar at the top of Visual Studio. Then press `control-b` to build. Navigate to `tapesotop/Builds/VisualStudio/build/Release/tapestop.dll`. This is your final Release-mode VST3. Now use a Digital Audio Workstation or Audacity to test this effect.
+Select "Release" from the menu bar at the top of Visual Studio. Then press `control-shift-b` to build. Navigate to `Faust-Tutorial\plugins_code\tapestop\Builds\VisualStudio2019\x64\Release\VST3\tapestop.vst3`. This is your final Release-mode VST3. Congrats! Move it to a folder so that your Digital Audio Workstation can see it, and then try it out.
 
 ### Linux
 
