@@ -162,3 +162,7 @@ Select "Release" from the menu bar at the top of Visual Studio. Then press `cont
 ### Linux
 
 In a terminal, navigate to `tapestop/Builds/Linux`. Then run `make`.
+
+## Other Links
+
+Julius Smith's [320C course](https://ccrma.stanford.edu/courses/320c) ("Audio DSP Projects in Faust and C++"), which also covers JUCE and Plugin GUI Magic.

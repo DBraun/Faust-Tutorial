@@ -14,7 +14,7 @@ Let's learn about the **syntax of Faust**. You won't need to install anything be
 
 ### Day 2
 
-Let's learn about **deploying Faust code** into websites and plugins for DAWs such as Ableton Live/Logic Pro. We'll install Faust locally in order to have access to all of its tools and scripts.
+Let's learn about **deploying Faust code** into plugins for DAWs such as Ableton Live/Logic Pro. We'll install Faust locally in order to have access to all of its tools and scripts.
 
 ### Day 3
 

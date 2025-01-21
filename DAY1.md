@@ -37,9 +37,9 @@ python script.py --assets-dir /path/to/custom/assets --port 8080
 Now you can use `soundfile` with audio files that exist in your chosen assets directory.
 
 
-## Other Links
+## Other Faust Links
 
-Syntax manual:
+Syntax Manual:
 https://faustdoc.grame.fr/manual/syntax/
 
 Faust Libraries:
@@ -47,16 +47,6 @@ https://faustlibraries.grame.fr/
 
 Powered by Faust / Community Projects:
 https://faust.grame.fr/community/powered-by-faust/
-
-Julius Smith's 320C for Faust and JUCE:
-https://ccrma.stanford.edu/courses/320c
-
-Julius Smith's textbooks:
-1. Mathematics of the Discrete Fourier Transform (DFT) with Audio Applications: https://ccrma.stanford.edu/~jos/mdft/
-1. Introduction to Digital Filters: https://ccrma.stanford.edu/~jos/filters/
-and more...
-
-For a shorter introduction to Fourier analysis, read Chapter 2 of [Fundamentals of Music Processing](https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP). It's a great book for other content too.
 
 David Braun's Faust Projects:
 * [DawDreamer](https://github.com/DBraun/DawDreamer/)
@@ -68,3 +58,12 @@ David Braun's Faust Projects:
 
 David Braun's Faust Talks:
 * https://www.youtube.com/playlist?list=PLlgJDlgtJ1V-Eao5WFfI04Jdf9wYgYTvn
+
+## Other DSP
+
+* [Introduction to Digital Filters](https://ccrma.stanford.edu/~jos/filters/) by Julius Smith
+
+Somewhat related are books on Fourier analysis such as
+
+1. [Mathematics of the Discrete Fourier Transform (DFT) with Audio Applications](https://ccrma.stanford.edu/~jos/mdft/) by Julius Smith
+1. Chapter 2 of [Fundamentals of Music Processing](https://www.audiolabs-erlangen.de/fau/professor/mueller/bookFMP) by Meinard Müller. It's a great book for other content too.
