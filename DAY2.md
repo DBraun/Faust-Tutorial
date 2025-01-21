@@ -121,7 +121,7 @@ Now we will use the `faust2juce` command-line tool. You can read more about it [
 
 Since `faust` is available from the command line, `faust2juce` should be available too. Navigate to `Faust-Tutorial/plugin_code`. Then try `faust2juce` with no arguments.
 
-> If you're on Windows, since `faust2juce` is a shell script, you should actually try `sh faust2juce` now and in the later steps.
+> If you're on Windows, note that `faust2juce` is a shell script. The best way to run it is `Git Bash`, which is like a different command prompt. You may be able to launch this by searching for it from the Windows Search Box.
 
 After running `faust2juce`, you should see instructions on how to use it. Let's now run this:
 
