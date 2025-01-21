@@ -1,4 +1,9 @@
 /*
+This is a tutorial written by David Braun:
+https://github.com/DBraun
+*/
+
+/*
 Faust IDE overview:
 
 More information about the online IDE is here: https://github.com/grame-cncm/faustide.
