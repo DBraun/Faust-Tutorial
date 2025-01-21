@@ -105,7 +105,7 @@ Unzip `juce-*.*.*-windows.zip` to a location such as `C:/JUCE`. By using this ex
 
 Unzip `juce-*.*.*-osx.zip` to `~/JUCE`. By using this exact location, you will save yourself a lot of frustration. *We really mean it.* You should have `~/JUCE/Projucer`.
 
-### Plugin GUI Magic Installation (Optional)
+## Plugin GUI Magic Installation (Optional)
 
 Plugin GUI Magic can help you make a UI that is better than the default from `faust2juce`. It is a "what-you-see-is-what-you-get" (WYSIWYG) editor. Once the plugin is built, you can open it in a DAW and interactively adjust the layout of the UI components. Then you save a layout file. This file can be used to lock the layout in the future. If this sounds interesting, then try out this step!
 
