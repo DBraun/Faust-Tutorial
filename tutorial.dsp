@@ -798,7 +798,8 @@ First, we'll show the waveform and rdtable primtives.
 // process = it.frdtable(N, S, (wave:!,_), index);
 // process = it.frdtable(N, S, os.sinwaveform(S), index);
 
-// Let's use the soundfile primtive.
+// Let's use the soundfile primitive.
+// From the "assets" folder in this repository, drag "sine.wav" into the IDE's file section.
 // import("stdfaust.lib");
 // sound = soundfile("sine[url:{'sine.wav'}]",1);
 // // process = 0, _ : sound; // the inputs are the sound number and the read position index
@@ -807,6 +808,7 @@ First, we'll show the waveform and rdtable primtives.
 // sf_rate = sound(0,0) : !, _, si.block(sf_channels);
 // freq = hslider("freq",440,50,2000,0.01);
 // process = os.phasor(sf_size, freq) : sound(0) : !,!,si.bus(sf_channels);
+
 // // Note: suppose your soundfile is a clip of audio, not a wavecycle.
 // // Then you may want to adjust the playback speed based on the ratio of ma.SR to sf_rate.
 // import("stdfaust.lib");
@@ -881,7 +883,7 @@ Try `serum_oscillator.dsp` included with this tutorial.
 */
 
 /*
-Essential faust libraries functions:
+Essential Faust Libraries functions:
 * aa.clip
 * Conversion tools:
 * * ba.sec2samp and ba.samp2sec
