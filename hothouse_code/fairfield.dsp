@@ -1,5 +1,9 @@
 /*
-This is a lowpass gate that uses a Butterworth filter. The amplitude of the input signal is sent to an envelope follower, which drives the filter cutoff frequency. A random LFO is sent to a lowpass filter which modulates a single delay time, creating pitch modulation. 'Damp' controls the amount of filtering of the random signal.
+The amplitude of the input signal is sent to an envelope follower, 
+which drives the filter cutoff frequency of a lowpass filter.
+Separately, a random LFO is sent to a different lowpass filter.
+The resulting smoothed noise modulates a single delay time, creating pitch modulation.
+'Damp' controls the amount of filtering of the random signal.
 
 inspiration:
 https://www.native-instruments.com/en/reaktor-community/reaktor-user-library/entry/show/13091/
