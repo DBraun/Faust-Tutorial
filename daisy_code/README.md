@@ -17,9 +17,11 @@ In the current directory, run the following:
 faust2daisy -pod -sdram -sr 48000 -bs 16 oscillator.dsp
 ```
 
-It will ask if the Daisy is in `dfu` mode. Connect the Pod to your computer via micro-USB cable. Put the Daisy into bootloader mode by holding the `BOOT` button down and then pressing the `RESET` button. Then  release the `RESET` button and then release the `BOOT` button. This procedure is demonstrated below:
+It will say, "Press ENTER when Daisy is in DFU mode." Connect the Pod to your computer via micro-USB cable. Put the Daisy into DFU/bootloader mode by *holding* the `BOOT` button down and then *holding* the `RESET` button. Then release the `RESET` button and then release the `BOOT` button. This procedure is demonstrated below:
 
 > ![Flashing the Pod Example](https://github.com/electro-smith/DaisyWiki/raw/master/resources/Seed_Connect.gif) ([image credit](https://github.com/electro-smith/DaisyWiki/wiki/1.-Setting-Up-Your-Development-Environment))
+
+Then press `RESET` once and then press `BOOT` once. You should see a light on the Pod that fades from bright to dim and back in a cycle.
 
 Now you can press `enter` in Terminal to confirm that the Daisy is in `dfu` mode. If all goes well, you should see this "error" message:
 
