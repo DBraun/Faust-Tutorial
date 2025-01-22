@@ -13,6 +13,8 @@ Outline:
 1. `faust2daisy` Demos
 1. `faust2hothouse` Demos
 
+> Windows users: Be sure to run all of the commands from within Git Bash. Running them from cmd.exe or a Powershell terminal will not work.
+
 # Install the Daisy Toolchain
 
 Instructions for installing the Daisy Toolchain are [here](https://github.com/electro-smith/DaisyWiki/wiki/1.-Setting-Up-Your-Development-Environment#1-install-the-toolchain). Pick the link that's right for your OS:
@@ -20,24 +22,26 @@ Instructions for installing the Daisy Toolchain are [here](https://github.com/el
 * [Windows](https://github.com/electro-smith/DaisyWiki/wiki/1c.-Installing-the-Toolchain-on-Windows)
 * [Linux](https://github.com/electro-smith/DaisyWiki/wiki/1d.-Installing-the-Toolchain-on-Linux)
 
-On macOS, there may be some issues with permissions, but we'll help you with them.
+On macOS, it is probably necessary to run `xattr -c` on the `.pkg` file, like this:
+
+```bash
+xattr - c ~/Downloads/DaisyToolchain-macos-installer-x64-0.2.0.pkg
+```
 
 # Install Daisy Examples
 
-Use `git` to clone the [Daisy Examples](https://github.com/electro-smith/DaisyExamples/):
+We'll use `git` to clone the [Daisy Examples](https://github.com/electro-smith/DaisyExamples/):
 
 ```bash
 cd ~/GitHub  # where we'll keep DaisyExamples
 git clone --recursive https://github.com/electro-smith/DaisyExamples
+cd DaisyExamples
+./ci/build_libs.sh
 ```
-
-**It is important to use `--recursive` so that submodules are cloned.**
 
 # Install the Hothouse Examples
 
 We will summarize the intructions [here](https://github.com/clevelandmusicco/HothouseExamples/wiki/10%E2%80%90Minute-Quick-Start#getting-and-initializing-the-code).
-
-> Windows users: Be sure to run all of the following commands from within Git Bash. Running them from cmd.exe or a Powershell terminal will not work.
 
 ```bash
 cd ~/GitHub # where we'll keep HothouseExamples
@@ -56,6 +60,8 @@ You can download Python [here](https://www.python.org/downloads/). If you're on 
 
 # Update Environment Variables
 
+## macOS
+
 Yesterday, we updated our `PATH` variable so that the `faust` binary was always accessible from Terminal. Now we're going to add new environment variables to help with both the `faust2daisy` and `faust2hothouse` scripts. If you'd rather use `vim` or `emacs` for the steps below, that's ok! We'll use `nano`:
 
 ```bash
@@ -70,6 +76,22 @@ export HOTHOUSE_DIR=~/GitHub/HothouseExamples
 ```
 
 Then `control-o`, `enter`, and `control-x` one at a time to save and exit.
+
+## Linux
+
+Linux users should do something similar for their environment variables.
+
+## Windows
+
+Windows users can set *temporary* environment variables with this:
+
+```bash
+set LIBDAISY_DIR=%USERPROFILE%/GitHub/DaisyExamples/libdaisy
+set DAISYSP_DIR=%USERPROFILE%/GitHub/DaisyExamples/DaisySP
+set HOTHOUSE_DIR=%USERPROFILE%/GitHub/HothouseExamples
+```
+
+Adjust the paths above as necessary.
 
 # Advice for Code on Microcontrollers
 
