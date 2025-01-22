@@ -37,7 +37,10 @@ with {
     );
 };
 
-process = ef.dryWetMixer(wet, (fuzzFace,fuzzFace))
+process = ef.dryWetMixer(wet, (monoFX,monoFX))
 with {
-    wet = hslider("Dry/Wet [style:knob][knob:1]", 1, 0, 1, .01);
+    monoFX = _*gain : fuzzFace;
+    gain = hslider("Gain [style:knob][knob:1][unit:dB]", 0, -80, 12, .01) : ba.db2linear;
+    postGain = hslider("Post Gain [style:knob][knob:3][unit:dB]", 0, -80, 12, .01) : ba.db2linear;
+    wet = hslider("Dry/Wet [style:knob][knob:2]", 1, 0, 1, .01);
 };

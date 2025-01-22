@@ -80,4 +80,4 @@ Go to [daisy_code/README.md](daisy_code/README.md). When you're done, come back 
 
 # `faust2hothouse` Demos
 
-Let's introduce the [`faust2hothouse`](https://github.com/grame-cncm/faust/tree/master-dev/architecture/hothouse) tool. The source code is [here](https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2hothouse). This tool has a lot in common with `faust2daisy` because the Hothouse pedal uses a Daisy Seed.
+Go to [hothouse_code/README.md](hothouse_code/README.md).

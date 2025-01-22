@@ -1,8 +1,8 @@
 # Faust to Daisy
 
-Let's introduce the [`faust2daisy`](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool. The source code is [here](https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2daisy).
+Read the documentation for the [`faust2daisy`](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool. The source code is [here](https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2daisy), but you shouldn't need to read it.
 
-The `faust2daisy` tool works for the entire Daisy microcontroller ecosystem, but we'll use it for the Pod. The Daisy ecosystem is only one of many destinations to which Faust can be deployed. For other examples, check out [Faust2appls](https://github.com/grame-cncm/faust/tree/master-dev/tools/faust2appls).
+The `faust2daisy` tool works for the entire Daisy microcontroller ecosystem, but we'll use it for the Pod. The Daisy ecosystem is only one of many destinations to which Faust can be deployed. For other examples, check out [faust2appls](https://github.com/grame-cncm/faust/tree/master-dev/tools/faust2appls).
 
 ## Pod
 
@@ -29,6 +29,18 @@ make: *** [program-dfu] Error 74
 ```
 
 This error can be ignored. Connect headphones to either the line out or headphone out on the Pod and see if the knobs control the generated audio.
+
+Now's a good time to examine how the script works. Run the `faust2daisy` code above again, but this time press enter without putting the Pod into `dfu` mode. In Finder you'll see a directory named `oscillator`. Examine the content of this directory. Inside it, run the following:
+
+```bash
+make clean
+make
+```
+
+If it all seemed to work, then do the button sequence to put the Pod into Bootloder mode and then run
+```bash
+make program-dfu
+```
 
 ## Polyphony
 
