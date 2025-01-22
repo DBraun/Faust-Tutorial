@@ -27,6 +27,7 @@ On macOS, there may be some issues with permissions, but we'll help you with the
 Use `git` to clone the [Daisy Examples](https://github.com/electro-smith/DaisyExamples/):
 
 ```bash
+cd ~/GitHub  # where we'll keep DaisyExamples
 git clone --recursive https://github.com/electro-smith/DaisyExamples
 ```
 
