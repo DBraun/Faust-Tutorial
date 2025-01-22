@@ -4,7 +4,7 @@ Read the documentation for the [`faust2hothouse`](https://github.com/grame-cncm/
 
 ## Using the IDE
 
-We can skip the step of using `faust2hothouse` on the command line by using the online [IDE](https://faustide.grame.fr/). If you'd like to do this, open the tapestop effect with this [link](https://faustide.grame.fr/?code=https://raw.githubusercontent.com/DBraun/Faust-Tutorial/refs/heads/main/hothouse_code/tapestop.dsp). Make sure polyphony is set to "Mono." Then use the yellow truck icon "Export". For platform select "Hothouse". Then compile, download, and unzip.
+We can skip the step of using `faust2hothouse` on the command line by using the online [IDE](https://faustide.grame.fr/). If you'd like to do this, open the tapestop effect with this [link](https://faustide.grame.fr/?code=https://raw.githubusercontent.com/DBraun/Faust-Tutorial/refs/heads/main/hothouse_code/tapestop.dsp). Make sure polyphony is set to "Mono." Then use the yellow truck icon "Export". For platform, select "Hothouse". Then compile, download, and unzip.
 
 ## Flashing the Hothouse
 
