@@ -30,4 +30,4 @@ postGain = hslider("[6] Post Gain [style:knob][knob:6][unit:dB]", 0, -80, 12, .0
 
 stereoFX = monoFX, monoFX;
 wet = hslider("[3] Dry/Wet [knob:3][style:knob]", 1, 0, 1, .01);
-process = hgroup("Shifter", ef.dryWetMixer(wet, stereoFX) : _*postGain, _*postGain);
+process = hgroup("Shifter", ef.dryWetMixerConstantPower(wet, stereoFX) : _*postGain, _*postGain);

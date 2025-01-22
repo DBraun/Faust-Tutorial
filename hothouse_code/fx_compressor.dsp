@@ -91,7 +91,7 @@ with {
     };
 };
 
-fx_compressor = hgroup("Compressor", ef.dryWetMixer(wet, sp.stereoize(compressor_mono)))
+fx_compressor = hgroup("Compressor", ef.dryWetMixerConstantPower(wet, sp.stereoize(compressor_mono)))
 with {
 
     attack = hslider("[0] Attack [style:knob]", .5, 0, 1, .01);

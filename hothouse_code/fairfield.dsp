@@ -128,7 +128,7 @@ with {
         filter = filterByAmpFollower(i, folGain, folAtt, folRel, freq);
     };
 
-    result = ef.dryWetMixer(wet, (fairfieldChan(0), fairfieldChan(1)));
+    result = ef.dryWetMixerConstantPower(wet, (fairfieldChan(0), fairfieldChan(1)));
 };
 
 FairfieldCircuitryShallowWater = hgroup("Shallow Water", (filterPars, delayPars, wet)), si.bus(2) : fairfieldCircuitryShallowWater
