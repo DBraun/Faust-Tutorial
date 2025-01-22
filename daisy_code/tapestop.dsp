@@ -1,5 +1,15 @@
 import("stdfaust.lib");
 
+//------------------------------------------------------------
+// A stereo tapestop effect. 
+//
+// #### Parameters
+//
+// * `Button 1`: Hold to enable the tape stop.
+// * `Knob 1`: Stop time.
+// * `Knob 2`: Stop alpha. A middle value represents a linear deceleration (constant force). A low value represents an initially weaker, then stronger force. A high value represents an initially stronger, then weaker force.
+//------------------------------------------------------------
+
 declare tapeStop_demo author "David Braun";
 declare tapeStop_demo copyright "Copyright (C) 2024 by David Braun <braun@ccrma.stanford.edu>";
 declare tapeStop_demo license "MIT-style STK-4.3 license";
@@ -15,7 +25,7 @@ with {
     MAX_TIME_SAMP = MAX_TIME_SEC : ba.sec2samp;
     msec2samp = _/1000 : ba.sec2samp;
 
-    stop = button("[0] Stop [switch:2]");
+    stop = button("[0] Stop [switch:1]");
     stopTime = hslider("[1] Stop Time [knob:1][style:knob][unit:ms]", 100, MIN_TIME_SEC*1000, MAX_TIME_SEC*1000, 1) : msec2samp;
     stopAlpha = hslider("[2] Stop Alpha [knob:2][style:knob][tooltip:Alpha==1 represents a linear deceleration (constant force). Alpha<1 represents an initially weaker, then stronger force. Alpha>1 represents an initially stronger, then weaker force.]", 1, MIN_ALPHA, MAX_ALPHA, .01);
     gainAlpha = hslider("[3] Gain Alpha [style:knob][tooltip:During the tape-stop, lower alpha stays louder longer]", 1, MIN_ALPHA, MAX_ALPHA, .01);

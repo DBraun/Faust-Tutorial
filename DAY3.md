@@ -9,6 +9,7 @@ Outline:
 1. Install Hothouse Examples
 1. Install Python
 1. Update Environment Variables
+1. Advice for Code on Microcontrollers
 1. `faust2daisy` Demos
 1. `faust2hothouse` Demos
 
@@ -69,9 +70,13 @@ export HOTHOUSE_DIR=~/GitHub/HothouseExamples
 
 Then `control-o`, `enter`, and `control-x` one at a time to save and exit.
 
+# Advice for Code on Microcontrollers
+
+When writing code for microcontrollers such as Daisy devices or guitar pedals, keep in mind that your final *output* signal should never exceed the bounds of negative one to positive one. If it goes outside these bounds, it will ["clip"](https://en.wikipedia.org/wiki/Clipping_(audio)).
+
 # `faust2daisy` Demos
 
-Let's introduce the [`faust2daisy`](https://github.com/grame-cncm/faust/tree/master-dev/architecture/daisy) tool. The source code is [here](https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2daisy).
+Go to [daisy_code/README.md](daisy_code/README.md). When you're done, come back for the `faust2hothouse` demos.
 
 # `faust2hothouse` Demos
 

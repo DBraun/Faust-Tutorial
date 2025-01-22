@@ -1,6 +1,19 @@
 // suggested compilation:
 // faust2daisy -pod -sdram -sr 48000 -bs 16 synth.dsp
 
+//------------------------------------------------------------
+// An oscillator that can be triggered with a button. The pitch
+// is quantized to a major scale with the range of a standard
+// piano.
+//
+// #### Parameters
+//
+// * `Button 1`: Gate to trigger note.
+// * `Button 2`: Toggle an echo effect.
+// * `Knob 1`: Note in terms of MIDI pitch.
+// * `Knob 2`: Filter cutoff of a lowpass filter.
+//------------------------------------------------------------
+
 import("stdfaust.lib");
 
 //---------------scaleIonian-------------------------
