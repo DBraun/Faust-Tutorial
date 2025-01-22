@@ -137,7 +137,7 @@ with {
     delayPars = hgroup("[0] Delay",(
         (hslider("[0] Rate [style:knob][unit:Hz][knob:1]", 50., 1., 100., .0001) : si.smoo),
         (hslider("[1] Damp [style:knob][knob:2]", 0.5, 0., 1., .0001) : si.smoo),
-        (hslider("[2 ]Depth [style:knob][knob:3]", .0, 0., 1., .00001) : si.smooth(ba.tau2pole(.5)))
+        (hslider("[2] Depth [style:knob][knob:3]", .0, 0., 1., .00001) : si.smooth(ba.tau2pole(.5)))
     ));
 
     ampPars = hgroup("[0] Amp Follow", (
