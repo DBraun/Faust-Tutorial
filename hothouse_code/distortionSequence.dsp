@@ -20,6 +20,7 @@ with {
     preGain = sliderTop : it.remap(0, 1, -12, 12) : ba.db2linear;
 
     // column 1
+    circuit1(i) = _;
     circuit2(0) = aa.softclipQuadratic2;
     circuit3(0) = aa.hardclip2;
 
@@ -30,11 +31,6 @@ with {
     // column 3
     circuit2(2) = aa.hyperbolic2;
     circuit3(2) = aa.tanh1;
-
-    // defaults
-    circuit1(i) = _;
-    circuit2(i) = _;
-    circuit3(i) = _;
 
     secondary(0) = ef.wavefold(sliderBottom);
     secondary(1) = ba.downSampleCV(sliderBottom);
