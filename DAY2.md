@@ -19,7 +19,7 @@ To install Faust, go to the Faust [releases](https://github.com/grame-cncm/faust
 
 ### macOS
 
-Select between `Faust-2.*.*-arm64.dmg` and `Faust-2.*.*-x64.dmg` (arm64 for "Apple Silicon").
+Select between `Faust-2.*.*-arm64.dmg` ("Apple Silicon") and `Faust-2.*.*-x64.dmg` ("Intel").
 
 You need to run something like this after installing:
 ```bash
@@ -119,11 +119,11 @@ This repository can go anywhere. Mine is at `~/GitHub/foleys_gui_magic`, so I ha
 
 Now we will use the `faust2juce` command-line tool. You can read more about it [here](https://github.com/grame-cncm/faust/tree/master-dev/architecture/juce). Note that the *source code* of the tool is [here](https://github.com/grame-cncm/faust/blob/master-dev/tools/faust2appls/faust2juce). **It's actually just a shell script, even though it doesn't have the `.sh` extension.**
 
-Since `faust` is available from the command line, `faust2juce` should be available too. Navigate to `Faust-Tutorial/plugin_code`. Then try `faust2juce` with no arguments.
+Since `faust` is available from the command line, `faust2juce` should be available too. Navigate to `Faust-Tutorial/plugin_code`. Then try `faust2juce` with no arguments. It should explain which options it takes.
 
 > If you're on Windows, note that `faust2juce` is a shell script. The best way to run it is `Git Bash`, which is like a different command prompt. You may be able to launch this by searching for it from the Windows Search Box.
 
-After running `faust2juce`, you should see instructions on how to use it. Let's now run this:
+Let's now run this:
 
 ```bash
 faust2juce -jucemodulesdir ~/JUCE/modules tapestop.dsp
@@ -135,9 +135,9 @@ If you're following the steps for Plugin GUI Magic, then you can add `-magic` li
 faust2juce -jucemodulesdir ~/JUCE/modules -magic tapestop.dsp
 ```
 
-Next to `tapestop.dsp`, there should be a new directory called `tapestop`.
+Next to `tapestop.dsp`, there should be a new directory called `tapestop`. Copy this directory to a new location.
 
-> You may want to copy this directory to a new location. Why? This directory contains `tapestop.jucer` and `FaustPluginProcessor.cpp`. If you were to change your `tapestop.dsp` effect and run `faust2juce` again, you'd overwrite both of them. You probably want to overwrite `FaustPluginProcessor.cpp` since that's where the DSP is, but you don't want to overwrite `tapestop.jucer` since that will have some settings that you may have configured manually, as you are about to do...
+> Why copy and move it? This directory contains `tapestop.jucer` and `FaustPluginProcessor.cpp`. If you were to change your `tapestop.dsp` effect and run `faust2juce` again, you'd overwrite both of them. You probably want to overwrite `FaustPluginProcessor.cpp` since that's where the DSP is, but you don't want to overwrite `tapestop.jucer` since that will have some settings that you may have configured manually, as you are about to do...
 
 Now open the relocated `tapestop.jucer` file. If it doesn't open nicely, find `~/JUCE/Projucer` in Finder, open that. Then file-open `tapestop.jucer`.
 
