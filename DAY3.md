@@ -70,7 +70,7 @@ nano ~/.zshrc
 
 Adjusting for where you cloned the repositories, add these lines:
 ```
-export LIBDAISY_DIR=~/GitHub/DaisyExamples/libdaisy
+export LIBDAISY_DIR=~/GitHub/DaisyExamples/libDaisy
 export DAISYSP_DIR=~/GitHub/DaisyExamples/DaisySP
 export HOTHOUSE_DIR=~/GitHub/HothouseExamples
 ```
@@ -86,7 +86,7 @@ Linux users should do something similar for their environment variables.
 Windows users can set *temporary* environment variables with this:
 
 ```bash
-set LIBDAISY_DIR=%USERPROFILE%/GitHub/DaisyExamples/libdaisy
+set LIBDAISY_DIR=%USERPROFILE%/GitHub/DaisyExamples/libDaisy
 set DAISYSP_DIR=%USERPROFILE%/GitHub/DaisyExamples/DaisySP
 set HOTHOUSE_DIR=%USERPROFILE%/GitHub/HothouseExamples
 ```
