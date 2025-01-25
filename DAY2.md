@@ -166,3 +166,5 @@ In a terminal, navigate to `tapestop/Builds/Linux`. Then run `make`.
 ## Other Links
 
 Julius Smith's [320C course](https://ccrma.stanford.edu/courses/320c) ("Audio DSP Projects in Faust and C++"), which also covers JUCE and Plugin GUI Magic.
+
+The CMajor programming language offers a nice way to design GUIs with Javascript. Faust code can be converted to CMajor ([ref](https://faustdoc.grame.fr/tutorials/cmajor/)) and CMajor can compile Faust programs ([ref](https://github.com/cmajor-lang/cmajor/tree/main/examples/patches/FaustFM)).
